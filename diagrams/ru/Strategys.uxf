@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.2">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>240</x>
+      <y>80</y>
+      <w>270</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>
+WaitStrategySMSCV
+--
++_waitMutex: boost::mutex
++_condVar: boost::condition_variable
+--
++wait(rec: ExtendedPublicationRecord)
++notify(rec: ExtendedPublicationRecord)
+
+{innerclass
+ExtendedPublicationRecord
+
+innerclass}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>440</x>
+      <y>60</y>
+      <w>190</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=.
+traits: Traits
+rec: UserPublicationRecord</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>20</x>
+      <y>20</y>
+      <w>180</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>publicaition_record
+--
++request_value nRequest
++record_state nState
++unsigned int nAge
++publication_record *pNext
++void *pOwner
+--
++publicaition_record()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>20</x>
+      <y>190</y>
+      <w>180</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>UserPublicationRecord
+--
++SomeType *userData</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>100</x>
+      <y>140</y>
+      <w>30</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>240</x>
+      <y>320</y>
+      <w>270</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>
+WaitStrategySMMCV
+--
++_waitMutex: boost::mutex
+--
++wait(rec: ExtendedPublicationRecord)
++notify(rec: ExtendedPublicationRecord)
+
+{innerclass
+ExtendedPublicationRecord
+--
++_condVar: boost::condition_variable
+
+innerclass}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>440</x>
+      <y>300</y>
+      <w>190</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=.
+traits: Traits
+rec: UserPublicationRecord</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>240</x>
+      <y>560</y>
+      <w>270</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>
+WaitStrategyMMMCV
+--
+
+--
++wait(rec: ExtendedPublicationRecord)
++notify(rec: ExtendedPublicationRecord)
+
+{innerclass
+ExtendedPublicationRecord
+--
++_condVar: boost::condition_variable
++_waitMutex: boost::mutex
+
+innerclass}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>440</x>
+      <y>540</y>
+      <w>190</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=.
+traits: Traits
+rec: UserPublicationRecord</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>100</x>
+      <y>230</y>
+      <w>300</w>
+      <h>580</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;560.0;280.0;560.0;280.0;510.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>100</x>
+      <y>480</y>
+      <w>300</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>280.0;10.0;280.0;60.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>100</x>
+      <y>230</y>
+      <w>300</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>280.0;10.0;280.0;60.0;10.0;60.0</additional_attributes>
+  </element>
+</diagram>

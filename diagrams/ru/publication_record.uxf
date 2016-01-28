@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.2">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>20</x>
+      <y>20</y>
+      <w>180</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>publicaition_record
+--
++request_value nRequest
++record_state nState
++unsigned int nAge
++publication_record *pNext
++void *pOwner
+--
++publicaition_record()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>20</x>
+      <y>230</y>
+      <w>180</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>user_publication_record
+--
++SomeTypes *userData</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
